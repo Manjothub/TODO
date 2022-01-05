@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container pt-4">
+  <div class='col-lg-5 shadow p-4 mx-auto'>
+    <div class="alert alert-success">
+      <h2>Create Account</h2>
+    </div>
+      <form method="POST">
+        {% csrf_token %}
+          {{ form.as_p}}
+          <hr>
+          <input type="submit" value='Create Account' class="btn btn-success">
+      </form>
+</div>
+</div>
+{% endblock%}
+
